@@ -38,26 +38,6 @@ def solution(progresses, speeds):
         else : 
                cnt += 1
     answer.append(cnt)       
-#     for i in range(len(result)) :
-#         curIndex = i 
-#         if len(temp) == 0 or temp[-1] != i : 
-#             curIndex = 1
-#             temp.append(result[i])
-#             answer.append(curIndex+1)
-            
-#         else : 
-#             answer.pop()
-#             answer.append(curIndex+1)
-        
-        
-        
-    # for i in range(len(result)-1) : 
-    #     cnt = 1 
-    #     if result[i] == result[i+1] and : 
-    #         cnt += 1
-    #         answer.append(cnt)
-    #     else : 
-    #         answer.append(cnt)
+
     return answer
 
-    
