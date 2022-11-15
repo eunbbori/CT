@@ -8,4 +8,4 @@ def solution(word):
             words.append(''.join(list(j)))
     
     words.sort()      
-    return words.index(word)+1
+    return words.index(word)+1 #test
