@@ -16,3 +16,21 @@ function solution(s) {
   
   return answer;
 }
+
+//다른 풀이 
+function solution(s) {
+  const hash = {};
+
+  return [...s].map((v,i) => {
+    let result = hash[v] !== undefined ? i-hash[v] : -1;
+    hash[v] = i;
+    return result;
+  });
+}
+
+//다른 풀이 
+const solution = (s) =>
+  [...s].map((char, i) => {
+    const count = s.slice(0, i).lastIndexOf(char);
+    return count < 0 ? count : i - count;
+  });
