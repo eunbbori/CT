@@ -1,3 +1,4 @@
+// 방법 1
 function solution(files) {
     files.sort((a, b) => {
       const first = tokenize(a);
@@ -38,3 +39,28 @@ function solution(files) {
       return 1;
     } else return firstNum - secondNum;
   }
+
+// 방법 2
+function solution(files) {
+    return files.sort((a, b) => {
+      const aHead = a.match(/^\D+/)[0].toLowerCase();
+      const bHead = b.match(/^\D+/)[0].toLowerCase();
+  
+      if(aHead < bHead) return -1;
+      if(aHead > bHead) return 1;
+  
+      const aNum = a.match(/\d+/)[0].replace(/^0+/, '');
+      const bNum = b.match(/\d+/)[0].replace(/^0+/, '');
+  
+      return aNum - bNum;
+    });
+  }
+
+  /**
+ ^ : 문자열의 시작
+＼D : 숫자가 아닌 문자
++ : 앞의 표현식이 1회 이상 연속으로 반복
+
+＼d : 숫자
+
+*/
